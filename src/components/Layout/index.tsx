@@ -4,6 +4,7 @@ import GlobalStyles from '~app/styles/global'
 
 import { useToggleTheme } from '~app/hooks/toggleTheme'
 import Sidebar from '~app/components/Sidebar'
+import MenuBar from '~app/components/MenuBar'
 import * as Styled from './styles'
 
 const Layout: React.FC = props => {
@@ -18,6 +19,7 @@ const Layout: React.FC = props => {
         <Sidebar />
 
         <Styled.Main>{children}</Styled.Main>
+        <MenuBar />
       </Styled.Container>
     </ThemeProvider>
   )
