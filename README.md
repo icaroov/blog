@@ -3,20 +3,29 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&style=for-the-badge&color=24B36B&labelColor=000000" alt="PRs welcome!" />
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/icaroov/my-blog">
 
-  <img alt="License" src="https://img.shields.io/github/license/jpedroschmitz/gatsby-starter-ts?style=for-the-badge&color=24B36B&labelColor=000000">
+  <a href="https://github.com/icaroov">
+    <img alt="Made by Ícaro" src="https://img.shields.io/badge/made%20by-Icaro%20Oliveira-%2304D361">
+  </a>
 
-  <a href="https://twitter.com/intent/follow?screen_name=jpedroschmitz">
-    <img src="https://img.shields.io/twitter/follow/jpedroschmitz?style=for-the-badge&color=24B36B&labelColor=000000" alt="Follow @jpedroschmitz" />
+  <a href="https://github.com/icaroov/my-blog/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/icaroov/my-blog">
   </a>
 </p>
 
 <br>
 
-A TypeScript starter for Gatsby. No plugins and styling. Exactly the necessary to start 🔥
+Personal Blog made with Gatsby + TypeScript.
 
-No plugins installed, great for advanced users.
+## 🛠 Tools
+- [ReactJS](https://reactjs.org/)
+- [Gatsby](https://www.gatsbyjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [Styled Icons](https://styled-icons.js.org/)
+- [GraphQL](https://graphql.org/)
+
+---
 
 - 📏 **ESLint** — Pluggable JavaScript linter
 - 💖 **Prettier** - Opinionated Code Formatter
@@ -25,31 +34,33 @@ No plugins installed, great for advanced users.
 - 🚓 **Commitlint** - Lint commit messages
 - 🖌 **Renovate** - Dependency update tool
 - 🚫 **lint-staged** - Run linters against staged git files
-- 🗂 **Root import** - Import folders and files using the `@` prefix.
+- 🗂 **Root import** - Import folders and files using the `~app/` prefix.
 
-## 🚀 Getting started
+## 🚀 How to run
 
-The best way to start with this template is using the Gatsby CLI.
+To run smoothly, install Gatsby CLI globally on your machine.
 
+```shell
+npm install -g gatsby-cli
 ```
-npx gatsby new starter-ts https://github.com/jpedroschmitz/gatsby-starter-ts
+
+Next:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/icaroov/my-blog.git
+
+# Access the project folder
+$ cd my-blog
+
+# Install dependencies
+$ yarn
+
+# Run the application
+$ yarn start
+
+# The server will start on the port:8000 - access http://localhost:8000
 ```
-
-If you prefer you can clone this repository and run the following commands inside the project folder:
-
-1. `npm install` or `yarn`;
-2. `yarn start`;
-
-To view the project you can open `http://localhost:8000`.
-
-## 🤝 Contributing
-
-1. Fork this repository;
-2. Create your branch: `git checkout -b my-new-feature`;
-3. Commit your changes: `git commit -m 'Add some feature'`;
-4. Push to the branch: `git push origin my-new-feature`.
-
-**After your pull request is merged**, you can safely delete your branch.
 
 ## 📝 License
 
@@ -57,4 +68,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ---
 
-Made with ♥ by João Pedro Schmitz
+Made with ♥ by Ícaro Oliveira
