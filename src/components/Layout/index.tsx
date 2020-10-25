@@ -2,15 +2,17 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from '~app/styles/global'
 
+import { useToggleTheme } from '~app/hooks/toggleTheme'
 import Sidebar from '~app/components/Sidebar'
-import light from '~app/styles/themes/light'
 import * as Styled from './styles'
 
 const Layout: React.FC = props => {
   const { children } = props
 
+  const { theme } = useToggleTheme()
+
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={theme}>
       <Styled.Container>
         <GlobalStyles />
         <Sidebar />

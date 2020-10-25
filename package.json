@@ -43,9 +43,11 @@
     "gatsby-plugin-styled-components": "^3.3.12",
     "gatsby-source-filesystem": "^2.3.32",
     "gatsby-transformer-sharp": "^2.5.17",
+    "polished": "^4.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "^6.1.0",
+    "react-switch": "^5.0.1",
     "styled-components": "^5.2.0",
     "styled-icons": "^10.22.0",
     "tsconfig-paths-webpack-plugin": "3.3.0"

@@ -24,7 +24,7 @@ const Profile: React.FC = () => {
 
   return (
     <Styled.Container>
-      <Styled.ProfileLink>
+      <Styled.ProfileLink to="/">
         <Avatar />
         <Styled.Author>
           {title}

@@ -1,10 +1,10 @@
 export default {
-  title: 'light',
+  title: 'dark',
 
   colors: {
-    primary: '#21222C',
+    primary: '#F8F8F2',
     secondary: '#c1c1c1',
-    background: '#F8F8F2',
+    background: '#1e1f29',
     hover: '#8BE9FD',
     error: '#FF5555',
     success: '#50FA7B',
