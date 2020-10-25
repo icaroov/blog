@@ -4,8 +4,10 @@ import { ThemeContext } from 'styled-components'
 import { shade } from 'polished'
 
 import { useToggleTheme } from '~app/hooks/toggleTheme'
+
 import Profile from '../Profile'
 import SocialLinks from '../SocialLinks'
+import MenuLinks from '../MenuLinks'
 
 import * as Styled from './styles'
 
@@ -17,6 +19,7 @@ const Sidebar: React.FC = () => {
     <Styled.Container>
       <Profile />
       <SocialLinks />
+      <MenuLinks />
 
       <Switch
         onChange={toggleTheme}
