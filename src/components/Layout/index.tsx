@@ -1,19 +1,23 @@
 import React from 'react'
-
+import { ThemeProvider } from 'styled-components'
 import GlobalStyles from '~app/styles/global'
-import Profile from '~app/components/Profile'
+
+import Sidebar from '~app/components/Sidebar'
+import light from '~app/styles/themes/light'
+import * as Styled from './styles'
 
 const Layout: React.FC = props => {
   const { children } = props
 
   return (
-    <>
-      <GlobalStyles />
-      <aside>
-        <Profile />
-      </aside>
-      <main>{children}</main>
-    </>
+    <ThemeProvider theme={light}>
+      <Styled.Container>
+        <GlobalStyles />
+        <Sidebar />
+
+        <Styled.Main>{children}</Styled.Main>
+      </Styled.Container>
+    </ThemeProvider>
   )
 }
 

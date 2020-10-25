@@ -1,17 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import { ProfileData } from './props'
+import * as Styled from './styles'
 import Avatar from '../Avatar'
-
-interface ProfileData {
-  site: {
-    siteMetadata: {
-      title: string
-      position: string
-      description: string
-    }
-  }
-}
 
 const Profile: React.FC = () => {
   const {
@@ -31,12 +23,16 @@ const Profile: React.FC = () => {
   `)
 
   return (
-    <>
-      <Avatar />
-      <h1>{title}</h1>
-      <p>{position}</p>
-      <p>{description}</p>
-    </>
+    <Styled.Container>
+      <Styled.ProfileLink>
+        <Avatar />
+        <Styled.Author>
+          {title}
+          <Styled.Position>{position}</Styled.Position>
+        </Styled.Author>
+      </Styled.ProfileLink>
+      <Styled.Description>{description}</Styled.Description>
+    </Styled.Container>
   )
 }
 

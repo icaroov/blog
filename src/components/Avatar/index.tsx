@@ -1,14 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img, { FixedObject } from 'gatsby-image'
+import Img from 'gatsby-image'
 
-interface AvatarProps {
-  avatarImage: {
-    childImageSharp: {
-      fixed: FixedObject
-    }
-  }
-}
+import { AvatarProps } from './props'
 
 const Avatar: React.FC = () => {
   const { avatarImage }: AvatarProps = useStaticQuery(
@@ -25,7 +19,17 @@ const Avatar: React.FC = () => {
     `,
   )
 
-  return <Img fixed={avatarImage.childImageSharp.fixed} />
+  return (
+    <Img
+      fixed={avatarImage.childImageSharp.fixed}
+      style={{
+        borderRadius: '50%',
+        height: '3.75rem',
+        width: '3.75rem',
+        margin: 'auto',
+      }}
+    />
+  )
 }
 
 export default Avatar
