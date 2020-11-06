@@ -33,6 +33,12 @@ const Sidebar: React.FC = () => {
         offColor={shade(0.15, colors.background)}
         onColor={colors.success}
       />
+
+      <Styled.TextBottom>
+        Feito com
+        <span>♥</span>
+        por Ícaro Oliveira
+      </Styled.TextBottom>
     </Styled.Container>
   )
 }
