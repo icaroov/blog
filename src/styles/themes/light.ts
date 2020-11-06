@@ -8,6 +8,7 @@ export default {
     hover: '#82aaff',
     error: '#FF5555',
     success: '#50FA7B',
+    border: '#38444d',
   },
 
   breakpoints: {

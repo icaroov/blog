@@ -9,7 +9,7 @@ export const Container = styled.aside`
   width: 3.75rem;
   height: 100vh;
   right: 0;
-  border-left: 1px solid #38444d;
+  border-left: 1px solid ${props => props.theme.colors.border};
   padding: 0.8rem 0;
   position: fixed;
   background: ${props => props.theme.colors.background};

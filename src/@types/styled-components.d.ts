@@ -10,6 +10,7 @@ declare module 'styled-components' {
       hover: string
       error: string
       success: string
+      border: string
     }
     breakpoints: {
       xs: string

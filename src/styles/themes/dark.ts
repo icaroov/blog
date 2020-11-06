@@ -5,9 +5,10 @@ export default {
     primary: '#F8F8F2',
     secondary: '#c1c1c1',
     background: '#1e1f29',
-    hover: '#8BE9FD',
+    hover: '#9580FF',
     error: '#FF5555',
     success: '#50FA7B',
+    border: '#38444d',
   },
 
   breakpoints: {
