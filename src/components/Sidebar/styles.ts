@@ -15,7 +15,7 @@ export const Container = styled.aside`
 `
 
 export const TextBottom = styled.p`
-  color: white;
+  color: ${props => props.theme.colors.primary};
   font-size: 0.8rem;
   margin: 0;
 
