@@ -26,7 +26,7 @@ export const usePostList = () => {
   const { allMarkdownRemark }: PostQueryProps = useStaticQuery(
     graphql`
       query PostList {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
           edges {
             node {
               fields {
