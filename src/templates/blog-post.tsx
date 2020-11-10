@@ -1,16 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
-interface PostProps {
-  data: {
-    markdownRemark: {
-      frontmatter: {
-        title: string
-      }
-      html: string
-    }
-  }
-}
+import { PostProps } from '~app/@types/post'
 
 const BlogPost: React.FC<PostProps> = ({ data }) => {
   const post = data.markdownRemark
