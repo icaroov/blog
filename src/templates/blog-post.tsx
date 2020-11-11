@@ -3,12 +3,15 @@ import { graphql } from 'gatsby'
 import { PostProps } from '~app/@types/post'
 
 const BlogPost: React.FC<PostProps> = ({ data }) => {
-  const post = data.markdownRemark
+  const {
+    frontmatter: { title },
+    html,
+  } = data.markdownRemark
 
   return (
     <>
-      <h1>Title: {post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <h1>Title: {title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </>
   )
 }

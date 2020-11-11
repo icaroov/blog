@@ -4,6 +4,10 @@ export interface PostQueryProps {
       edges: EdgesProps[]
     }
   }
+  pageContext: {
+    currentPage: number
+    numPages: number
+  }
 }
 
 export interface EdgesProps {
