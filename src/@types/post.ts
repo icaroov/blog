@@ -31,8 +31,11 @@ export interface PostProps {
     markdownRemark: {
       frontmatter: {
         title: string
+        description: string
+        date: string
       }
       html: string
+      timeToRead: string
     }
   }
 }

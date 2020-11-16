@@ -4,6 +4,7 @@ import { PostQueryProps } from '~app/@types/post'
 
 import Layout from '~app/components/Layout'
 import SEO from '~app/components/SEO'
+
 import PostItem from '~app/components/PostItem'
 import Pagination from '~app/components/Pagination'
 
