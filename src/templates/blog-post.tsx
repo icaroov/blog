@@ -4,15 +4,18 @@ import { PostProps } from '~app/@types/post'
 
 import Layout from '~app/components/Layout'
 import SEO from '~app/components/SEO'
+import RecommendedPosts from '~app/components/RecommendedPosts'
 
 import * as Styled from '~app/components/Post/styles'
 
-const BlogPost: React.FC<PostProps> = ({ data }) => {
+const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
   const {
     frontmatter: { title, description, date },
     html,
     timeToRead,
   } = data.markdownRemark
+
+  const { nextPost, previousPost } = pageContext
 
   return (
     <Layout>
@@ -27,6 +30,7 @@ const BlogPost: React.FC<PostProps> = ({ data }) => {
       <Styled.MainContent>
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </Styled.MainContent>
+      <RecommendedPosts next={nextPost} previous={previousPost} />
     </Layout>
   )
 }

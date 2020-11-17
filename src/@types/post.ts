@@ -1,3 +1,5 @@
+import { ContentType } from '~app/components/RecommendedPosts/props'
+
 export interface PostQueryProps {
   data: {
     allMarkdownRemark: {
@@ -37,5 +39,9 @@ export interface PostProps {
       html: string
       timeToRead: string
     }
+  }
+  pageContext: {
+    nextPost: ContentType
+    previousPost: ContentType
   }
 }
