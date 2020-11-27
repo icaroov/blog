@@ -1,5 +1,6 @@
 import { ContentType } from '~app/components/RecommendedPosts/props'
 
+// Post Query
 export interface PostQueryProps {
   data: {
     allMarkdownRemark: {
@@ -17,31 +18,65 @@ export interface EdgesProps {
     fields: {
       slug: string
     }
-    frontmatter: {
-      background?: string
-      category: string
-      date: string
-      description: string
-      title: string
-    }
+    frontmatter: Frontmatter
     timeToRead: string
   }
 }
 
+type Frontmatter = {
+  title: string
+  description: string
+  date: string
+  category?: string
+  background?: string
+}
+
+// Post
 export interface PostProps {
   data: {
-    markdownRemark: {
-      frontmatter: {
-        title: string
-        description: string
-        date: string
-      }
-      html: string
-      timeToRead: string
-    }
+    markdownRemark: MarkdownRemark
   }
   pageContext: {
     nextPost: ContentType
     previousPost: ContentType
+  }
+}
+
+type MarkdownRemark = {
+  frontmatter: Frontmatter
+  html: string
+  timeToRead: string
+}
+
+// Algolia
+export interface AlgoliaQueryProps {
+  query: string
+  transformer: ({ data }: { data: DataProps }) => any
+  indexName: string
+  settings: {
+    attributesToSnippet: string[]
+  }
+}
+
+type DataProps = {
+  posts: {
+    edges: { node: any }[]
+  }
+}
+
+export interface ArrayProps {
+  node: {
+    objectID: string
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      category: string
+      // eslint-disable-next-line camelcase
+      date_timestamp: string
+      date: string
+      description: string
+      title: string
+    }
   }
 }

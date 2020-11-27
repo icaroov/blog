@@ -10,13 +10,4 @@ export default {
     success: '#50FA7B',
     border: '#38444d',
   },
-
-  breakpoints: {
-    xs: '400px',
-    sm: '600px',
-    mobile: '800px',
-    md: '960px',
-    desktop: '1280px',
-    xl: '1920px',
-  },
 }
