@@ -3,7 +3,7 @@ export interface PostProps {
   background?: string
   category: string
   date: string
-  timeToRead: string
+  timeToRead?: string
   title: string
   description: string
 }

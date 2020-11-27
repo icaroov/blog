@@ -51,6 +51,9 @@ export const MainContent = styled.section`
     letter-spacing: 0.069rem;
     padding: 0 1.4rem;
   }
+  .gatsby-resp-image-background-image {
+    border-radius: 5px;
+  }
   p {
     margin: 0 auto 1.6rem;
   }
@@ -83,6 +86,7 @@ export const MainContent = styled.section`
     display: block;
     max-width: 100%;
     margin: 1.875rem auto;
+    border-radius: 5px;
   }
   iframe {
     padding: 0 1.6rem 1.6rem;
