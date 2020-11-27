@@ -1,3 +1,6 @@
+require('dotenv').config()
+const queries = require('./src/graphql/algolia-query.ts')
+
 module.exports = {
   siteMetadata: {
     title: 'My Personal Blog',
@@ -13,6 +16,17 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-algolia-search`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+        queries,
+        chunkSize: 10000,
+        enablePartialUpdates: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
