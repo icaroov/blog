@@ -7,7 +7,9 @@ function usePersistedState<Parameter>(
   initialState: Parameter,
 ): Response<Parameter> {
   const [state, setState] = useState(() => {
-    const storageValue = localStorage.getItem(key)
+    const isSsr = typeof window === 'undefined'
+
+    const storageValue = isSsr ? null : localStorage.getItem(key)
 
     if (storageValue) {
       return JSON.parse(storageValue)
