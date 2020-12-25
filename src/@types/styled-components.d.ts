@@ -7,11 +7,12 @@ declare module 'styled-components' {
       primary: string
       secondary: string
       background: string
-      link?: string
+      link: string
       hover: string
       error: string
       success: string
       border: string
+      footer: string
     }
     breakpoints?: {
       xs: string

@@ -5,6 +5,10 @@ export const Header = styled.header`
   margin: auto;
   max-width: 70rem;
   padding: 5rem 5rem 0;
+
+  @media (max-width: 800px) {
+    padding: 0;
+  }
 `
 
 export const Title = styled.h1`
@@ -57,6 +61,10 @@ export const MainContent = styled.section`
   p {
     margin: 0 auto 1.6rem;
   }
+  pre {
+    border-radius: 5px;
+    box-shadow: 5px 5px 26px 0px rgba(50, 50, 50, 0.75);
+  }
   h1,
   h2,
   h3,
@@ -71,7 +79,6 @@ export const MainContent = styled.section`
     margin: 0 auto 1.6rem;
   }
   li {
-    padding: 0.625rem 0;
     & > ul {
       margin-bottom: 0;
     }
@@ -112,7 +119,7 @@ export const MainContent = styled.section`
   h3,
   h4,
   h5 {
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.069rem;
     line-height: 1.4;
   }
@@ -166,5 +173,9 @@ export const MainContent = styled.section`
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  @media (max-width: 800px) {
+    padding: 0;
   }
 `

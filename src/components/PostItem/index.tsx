@@ -15,18 +15,18 @@ const PostItem: React.FC<PostProps> = props => {
   } = props
 
   return (
-    <Styled.PostLink to={slug}>
-      <Styled.Container>
-        <Styled.Tag backgroundColor={background}>{category}</Styled.Tag>
+    <Styled.Container>
+      <Styled.PostLink to={slug}>
         <Styled.Info>
+          <Styled.Tag backgroundColor={background}>{category}</Styled.Tag>
           <Styled.Date>
             {date} - {timeToRead} min de leitura
           </Styled.Date>
           <Styled.Title>{title}</Styled.Title>
           <Styled.Description>{description}</Styled.Description>
         </Styled.Info>
-      </Styled.Container>
-    </Styled.PostLink>
+      </Styled.PostLink>
+    </Styled.Container>
   )
 }
 

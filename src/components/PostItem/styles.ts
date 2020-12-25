@@ -25,24 +25,28 @@ export const Container = styled.section`
 `
 
 export const Tag = styled.div<TagProps>`
-  align-items: center;
-  background: ${props =>
-    props.backgroundColor ? props.backgroundColor : props.theme.colors.hover};
-  border-radius: 50%;
-  color: ${props => props.theme.colors.background};
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 40px;
+
+  border-radius: 3px;
+  margin-bottom: 15px;
+
   font-size: 1.3rem;
   font-weight: 700;
-  justify-content: center;
-  min-height: 90px;
-  min-width: 90px;
   text-transform: uppercase;
+
+  color: #fff;
+  background: ${props =>
+    props.backgroundColor ? props.backgroundColor : props.theme.colors.hover};
 `
 
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
 `
 
 export const Date = styled.time`

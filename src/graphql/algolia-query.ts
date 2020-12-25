@@ -1,25 +1,29 @@
-const postQuery = `{
-  posts: allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }){
-    edges {
-      node {
-        objectID: id
-        fields {
-          slug
+const POST_QUERY = /* GraphQL */ `
+  {
+    posts: allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          objectID: id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            background
+            category
+            date_timestamp: date
+            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            description
+          }
+          timeToRead
+          excerpt(pruneLength: 5000)
         }
-        frontmatter {
-          title
-          background
-          category
-          date_timestamp: date
-          date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-          description
-        }
-        timeToRead
-        excerpt(pruneLength: 5000)
       }
     }
   }
-}`
+`
 
 const transformerData = arr =>
   arr.map(({ node: { frontmatter, ...rest } }) => ({
@@ -35,7 +39,7 @@ const settings = { attributesToSnippet: [`excerpt:20`] }
 
 const queries = [
   {
-    query: postQuery,
+    query: POST_QUERY,
     transformer: ({ data }) => transformerData(data.posts.edges),
     indexName: `Posts`,
     settings,

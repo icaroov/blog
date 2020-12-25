@@ -10,5 +10,6 @@ export default {
     error: '#FF5555',
     success: '#50FA7B',
     border: '#38444d',
+    footer: '#2a2c37',
   },
 }
