@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js remove react-switch
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js remove husky
 
 PATH: 
   C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\ProgramData\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\icaro\AppData\Local\Microsoft\WindowsApps;C:\Users\icaro\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\icaro\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\icaro\AppData\Local\Yarn\bin;C:\Program Files\Docker Toolbox;C:\tools\Cmder;C:\Users\icaro\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;C:\Users\icaro\AppData\Local\Microsoft\WindowsApps;C:\Users\icaro\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Projetos\gatsby-blog\node_modules\sharp\build\Release\libexif-12.dll'
+  Error: EPERM: operation not permitted, unlink 'C:\Projetos\gatsby-blog\node_modules\sharp\build\Release\libexpat-1.dll'
 
 npm manifest: 
   {
@@ -42,13 +42,13 @@ npm manifest:
     },
     "husky": {
       "hooks": {
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        "pre-commit": "lint-staged"
       }
     },
     "lint-staged": {
       "./src/**/*.{ts,js,jsx,tsx}": [
         "yarn lint --fix",
-        "yarn format"
+        "yarn test --findRelatedTests --bail"
       ]
     },
     "dependencies": {
@@ -103,15 +103,9 @@ npm manifest:
       "eslint-plugin-prettier": "3.1.4",
       "eslint-plugin-react": "7.21.2",
       "eslint-plugin-react-hooks": "4.1.2",
-      "husky": "4.3.0",
       "lint-staged": "10.4.0",
       "prettier": "2.1.2",
       "typescript": "4.0.3"
-    },
-    "config": {
-      "commitizen": {
-        "path": "./node_modules/cz-conventional-changelog"
-      }
     }
   }
 
