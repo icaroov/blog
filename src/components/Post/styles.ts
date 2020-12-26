@@ -179,3 +179,12 @@ export const MainContent = styled.section`
     padding: 0;
   }
 `
+export const CommentsWrapper = styled.p`
+  display: flex;
+  justify-content: center;
+
+  padding: 1rem;
+
+  color: ${props => props.theme.colors.primary};
+  cursor: pointer;
+`

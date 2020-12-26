@@ -4,6 +4,7 @@ import { PostProps } from '~app/@types/post'
 
 import Layout from '~app/components/Layout'
 import SEO from '~app/components/SEO'
+
 import RecommendedPosts from '~app/components/RecommendedPosts'
 
 import * as Styled from '~app/components/Post/styles'
@@ -38,6 +39,9 @@ const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
 export const query = graphql`
   query Post($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       frontmatter {
         title
         description

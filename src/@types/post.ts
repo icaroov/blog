@@ -44,6 +44,9 @@ export interface PostProps {
 
 type MarkdownRemark = {
   frontmatter: Frontmatter
+  fields: {
+    slug: string
+  }
   html: string
   timeToRead: string
 }
