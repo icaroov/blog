@@ -8,6 +8,7 @@ export const Header = styled.header`
 
   @media (max-width: 800px) {
     padding: 0;
+    margin-bottom: 2rem;
   }
 `
 
@@ -17,6 +18,10 @@ export const Title = styled.h1`
   font-weight: 700;
   padding: 0 1.4rem;
   margin: 1rem auto;
+
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const Description = styled.h2`
@@ -24,6 +29,10 @@ export const Description = styled.h2`
   font-size: 2rem;
   font-weight: 200;
   padding: 0 1.4rem;
+
+  @media (max-width: 800px) {
+    font-size: 1.5rem;
+  }
 `
 
 export const Date = styled.p`
@@ -31,6 +40,10 @@ export const Date = styled.p`
   font-size: 1.1rem;
   font-weight: 100;
   padding: 0 1.4rem;
+
+  @media (max-width: 800px) {
+    font-size: 0.9rem;
+  }
 `
 
 export const MainContent = styled.section`
@@ -104,6 +117,10 @@ export const MainContent = styled.section`
     border-left: 0.3rem solid ${props => props.theme.colors.success};
     padding: 0 1.875rem;
     margin: 3.125rem auto;
+
+    @media (max-width: 800px) {
+      padding: 0 1rem;
+    }
   }
   hr {
     border: 1px solid ${props => props.theme.colors.border};
@@ -128,6 +145,10 @@ export const MainContent = styled.section`
   }
   h2 {
     font-size: 2.1rem;
+
+    @media (max-width: 800px) {
+      font-size: 1.6rem;
+    }
   }
   h3 {
     font-size: 1.6rem;
@@ -163,15 +184,19 @@ export const MainContent = styled.section`
     margin: 1rem auto !important;
   }
   a {
-    border-bottom: 1px dashed #1fa1f2;
-    color: #1fa1f2;
     text-decoration: none;
-    transition: opacity 0.5s;
+
+    color: ${props => props.theme.colors.link};
+    border-bottom: 1px solid ${props => props.theme.colors.link};
+
+    transition: opacity 0.3s;
+
     svg {
       color: ${props => props.theme.colors.primary};
     }
+
     &:hover {
-      opacity: 0.8;
+      border-bottom: 1px dashed ${props => props.theme.colors.link};
     }
   }
 

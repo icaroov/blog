@@ -64,8 +64,4 @@ export const Text = styled.div`
       text-decoration: underline;
     }
   }
-
-  @media (max-width: 800px) {
-    margin-bottom: 1rem;
-  }
 `

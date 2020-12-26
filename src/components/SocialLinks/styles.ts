@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.nav`
   width: 15%;
+
+  @media (max-width: 800px) {
+    margin-top: 2rem;
+    width: 90%;
+  }
 `
 
 export const List = styled.ul`

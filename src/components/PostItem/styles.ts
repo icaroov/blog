@@ -22,6 +22,10 @@ export const Container = styled.section`
   padding: 2rem 3rem;
 
   border-bottom: 1px solid ${props => props.theme.colors.border};
+
+  @media (max-width: 800px) {
+    padding: 1rem;
+  }
 `
 
 export const Tag = styled.div<TagProps>`

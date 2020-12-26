@@ -24,4 +24,8 @@ export const Container = styled.header`
       text-decoration: underline;
     }
   }
+
+  @media (max-width: 800px) {
+    padding: 2rem 1rem 2rem;
+  }
 `

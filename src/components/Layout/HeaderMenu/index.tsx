@@ -15,7 +15,12 @@ const HeaderMenu: React.FC = () => {
     <Styled.Container>
       <Link to="/">Blog.</Link>
 
-      <DarkModeSwitch checked={title === 'dark'} onChange={toggleTheme} />
+      <DarkModeSwitch
+        checked={title === 'dark'}
+        onChange={toggleTheme}
+        sunColor="#FBC531"
+        moonColor="#E3E3C7"
+      />
     </Styled.Container>
   )
 }

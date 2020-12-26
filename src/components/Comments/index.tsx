@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Comments: React.FC<Props> = ({ url, title }) => {
-  const completeURL = `https://willianjusten.com.br${url}`
+  const completeURL = `https://icaro-devblog.com.br${url}`
 
   return (
     <Styled.Container>

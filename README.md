@@ -5,10 +5,6 @@
 <p align="center">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/icaroov/gatsby-blog?color=%238A4BAF&style=flat-square">
 
-  <a href="https://github.com/icaroov">
-    <img alt="License" src="https://img.shields.io/github/license/icaroov/gatsby-blog?color=%238a4baf&style=flat-square">
-  </a>
-
   <a href="https://github.com/icaroov/my-blog/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/icaroov/gatsby-blog?color=%238A4BAF&style=flat-square">
   </a>
@@ -32,7 +28,6 @@
 
 - 📏 **ESLint** — Pluggable JavaScript linter.
 - 💖 **Prettier** - Opinionated Code Formatter.
-- 🐶 **Husky** — Use git hooks with ease.
 - 📄 **Commitizen** - Conventional commit messages CLI.
 - 🚓 **Commitlint** - Lint commit messages.
 - 🖌 **Renovate** - Dependency update tool.

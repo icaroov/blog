@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         <Styled.Text>
           <Styled.Tag to="/">Blog</Styled.Tag>
           <p>
-            Ícaro Oliveira © 2021, feito em{' '}
+            Ícaro Oliveira © 2021, feito com{' '}
             <a href={gatsbyUrl} target="_blank" rel="noreferrer">
               Gatsby
             </a>{' '}
