@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Header = styled.header`
+export const Header = styled(motion.header)`
   color: white;
   margin: auto;
   max-width: 70rem;
-  padding: 5rem 5rem 0;
+  padding: 0rem 5rem 0;
 
   @media (max-width: 800px) {
     padding: 0;
@@ -12,7 +13,7 @@ export const Header = styled.header`
   }
 `
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   color: ${props => props.theme.colors.primary};
   font-size: 4rem;
   font-weight: 700;
@@ -24,7 +25,7 @@ export const Title = styled.h1`
   }
 `
 
-export const Description = styled.h2`
+export const Description = styled(motion.h2)`
   color: ${props => props.theme.colors.primary};
   font-size: 2rem;
   font-weight: 200;
@@ -35,7 +36,7 @@ export const Description = styled.h2`
   }
 `
 
-export const Date = styled.p`
+export const Date = styled(motion.p)`
   color: ${props => props.theme.colors.primary};
   font-size: 1.1rem;
   font-weight: 100;
@@ -46,7 +47,7 @@ export const Date = styled.p`
   }
 `
 
-export const MainContent = styled.section`
+export const MainContent = styled(motion.section)`
   margin: auto;
   max-width: 70rem;
   padding: 2rem 5rem;

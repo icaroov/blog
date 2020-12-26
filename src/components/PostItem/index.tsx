@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { fadeInUp } from '~app/utils/pageScroll'
+
 import * as Styled from './styles'
 import { PostProps } from './props'
 
@@ -15,7 +17,12 @@ const PostItem: React.FC<PostProps> = props => {
   } = props
 
   return (
-    <Styled.Container>
+    <Styled.Container
+      initial="in"
+      animate="animate"
+      exit="out"
+      variants={fadeInUp}
+    >
       <Styled.PostLink to={slug}>
         <Styled.Tag backgroundColor={background}>{category}</Styled.Tag>
         <Styled.Info>

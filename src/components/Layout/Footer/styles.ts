@@ -6,6 +6,7 @@ export const Container = styled.footer`
   -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
   box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
 
+  margin-top: 5px;
   background: ${props => props.theme.colors.footer};
 `
 

@@ -1,11 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { motion } from 'framer-motion'
+
+import { fadeInUp } from '~app/utils/pageScroll'
 import { PostProps } from '~app/@types/post'
 
 import Layout from '~app/components/Layout'
 import SEO from '~app/components/SEO'
 
 import RecommendedPosts from '~app/components/RecommendedPosts'
+import CircleProgress from '~app/components/CircleProgress'
 
 import * as Styled from '~app/components/Post/styles'
 
@@ -21,16 +25,26 @@ const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={title} />
-      <Styled.Header>
-        <Styled.Date>
+      <CircleProgress />
+      <Styled.Header variants={fadeInUp}>
+        <Styled.Date variants={fadeInUp}>
           {date} • {timeToRead} min de leitura
         </Styled.Date>
-        <Styled.Title>{title}</Styled.Title>
-        <Styled.Description>{description}</Styled.Description>
+
+        <Styled.Title variants={fadeInUp}>{title}</Styled.Title>
+
+        <Styled.Description variants={fadeInUp}>
+          {description}
+        </Styled.Description>
       </Styled.Header>
-      <Styled.MainContent>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+
+      <Styled.MainContent variants={fadeInUp}>
+        <motion.div
+          variants={fadeInUp}
+          dangerouslySetInnerHTML={{ __html: html }}
+        ></motion.div>
       </Styled.MainContent>
+
       <RecommendedPosts next={nextPost} previous={previousPost} />
     </Layout>
   )

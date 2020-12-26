@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { motion } from 'framer-motion'
 
 interface TagProps {
   backgroundColor: string
@@ -14,7 +15,7 @@ export const PostLink = styled(Link)`
   color: ${props => props.theme.colors.primary};
 `
 
-export const Container = styled.section`
+export const Container = styled(motion.div)`
   display: flex;
   align-items: center;
 

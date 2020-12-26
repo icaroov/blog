@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const Container = styled.section`
   display: flex;
   flex-direction: column;
 `
 
-export const Main = styled.main`
+export const Main = styled(motion.main)`
   width: 100%;
   max-width: 1020px;
   min-height: 100vh;

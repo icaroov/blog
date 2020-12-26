@@ -4,11 +4,10 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyles from '~app/styles/global'
 import { useToggleTheme } from '~app/hooks/toggleTheme'
 
+import { stagger } from '~app/utils/pageScroll'
+
 import HeaderMenu from './HeaderMenu'
 import Footer from './Footer'
-
-import Sidebar from '~app/components/Sidebar'
-import MenuBar from '~app/components/MenuBar'
 
 import * as Styled from './styles'
 
@@ -21,11 +20,18 @@ const Layout: React.FC = props => {
     <ThemeProvider theme={theme}>
       <Styled.Container>
         <GlobalStyles />
-        {/* <Sidebar /> */}
 
         <HeaderMenu />
-        <Styled.Main>{children}</Styled.Main>
-        {/* <MenuBar /> */}
+
+        <Styled.Main
+          exit={{ opacity: 0 }}
+          initial="in"
+          animate="animate"
+          variants={stagger}
+        >
+          {children}
+        </Styled.Main>
+
         <Footer />
       </Styled.Container>
     </ThemeProvider>
