@@ -3,7 +3,7 @@ const queries = require('./src/graphql/algolia-query.ts')
 
 module.exports = {
   siteMetadata: {
-    title: 'My Personal Blog',
+    title: 'Icaro Oliveira',
     position: 'Desenvolvedor Web',
     description: 'A blog about frontend development and other cool stuff.',
     author: '@icaroov',
