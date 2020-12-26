@@ -14,6 +14,7 @@ export const RecommendedLink = styled(Link)`
   padding: 3rem;
 
   width: 50%;
+  margin-bottom: 5px;
   text-decoration: none;
 
   opacity: 0.5;

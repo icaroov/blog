@@ -1,11 +1,10 @@
 import React from 'react'
 
-import * as Styled from './styles'
+import SocialLinks from '~app/components/SocialLinks'
 import { getPath } from '~app/utils/getPaths'
 
-const githubUrl = getPath.urls.externalLinks.github
-const linkedinUrl = getPath.urls.externalLinks.linkedin
-const emailUrl = getPath.urls.externalLinks.email
+import * as Styled from './styles'
+
 const gatsbyUrl = getPath.urls.externalLinks.gatsby
 
 const Footer: React.FC = () => {
@@ -22,17 +21,7 @@ const Footer: React.FC = () => {
             🔥
           </p>
         </Styled.Text>
-        <Styled.Links>
-          <a href={githubUrl} target="_blank" rel="noreferrer">
-            Github
-          </a>
-          <a href={linkedinUrl} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href={emailUrl} target="_blank" rel="noreferrer">
-            Email
-          </a>
-        </Styled.Links>
+        <SocialLinks />
       </Styled.Wrapper>
     </Styled.Container>
   )

@@ -17,8 +17,8 @@ const PostItem: React.FC<PostProps> = props => {
   return (
     <Styled.Container>
       <Styled.PostLink to={slug}>
+        <Styled.Tag backgroundColor={background}>{category}</Styled.Tag>
         <Styled.Info>
-          <Styled.Tag backgroundColor={background}>{category}</Styled.Tag>
           <Styled.Date>
             {date} - {timeToRead} min de leitura
           </Styled.Date>

@@ -14,11 +14,11 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
   return (
     <Styled.PaginationContainer>
-      {!isFirst && <Link to={prevPage}>página anterior</Link>}
+      {!isFirst && <Link to={prevPage}>← página anterior</Link>}
       <p>
         {currentPage} de {numPages}
       </p>
-      {!isLast && <Link to={nextPage}>próxima página</Link>}
+      {!isLast && <Link to={nextPage}>próxima página →</Link>}
     </Styled.PaginationContainer>
   )
 }

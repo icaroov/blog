@@ -4,7 +4,7 @@ description: 'Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cu
 date: '2019-08-22 08:51:23'
 image: /assets/img/mussum-ipsum.jpg
 category: JS
-background: '#EFD81D'
+background: '#fbc531'
 ---
 ## Mussum Ipsum o melhor ipsum do mundis
 

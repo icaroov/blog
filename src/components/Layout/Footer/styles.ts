@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const Container = styled.footer`
+  -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
+
   background: ${props => props.theme.colors.footer};
 `
 
@@ -35,6 +39,13 @@ export const Tag = styled(Link)`
   text-decoration: none;
   color: #fff;
   background: #ed1c24;
+
+  opacity: 0.8;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
 `
 
 export const Text = styled.div`
@@ -56,19 +67,5 @@ export const Text = styled.div`
 
   @media (max-width: 800px) {
     margin-bottom: 1rem;
-  }
-`
-export const Links = styled.div`
-  > a {
-    text-decoration: none;
-    color: ${props => props.theme.colors.link};
-
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 `

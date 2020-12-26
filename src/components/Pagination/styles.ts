@@ -10,10 +10,9 @@ export const PaginationContainer = styled.section`
   a {
     color: ${props => props.theme.colors.primary};
     text-decoration: none;
-    transition: color 0.5s;
 
     &:hover {
-      color: ${props => props.theme.colors.hover};
+      text-decoration: underline;
     }
   }
 `

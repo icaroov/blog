@@ -6,22 +6,22 @@ interface TagProps {
 }
 
 export const PostLink = styled(Link)`
-  color: ${props => props.theme.colors.primary};
   display: flex;
-  text-decoration: none;
-  transition: 0.3s;
+  flex-direction: column;
 
-  &:hover {
-    color: ${props => props.theme.colors.hover};
-  }
+  text-decoration: none;
+
+  color: ${props => props.theme.colors.primary};
 `
 
 export const Container = styled.section`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid ${props => props.theme.colors.border};
-  padding: 2rem 3rem;
+
   width: 100%;
+  padding: 2rem 3rem;
+
+  border-bottom: 1px solid ${props => props.theme.colors.border};
 `
 
 export const Tag = styled.div<TagProps>`
@@ -47,6 +47,13 @@ export const Tag = styled.div<TagProps>`
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
+  opacity: 0.8;
+
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
 `
 
 export const Date = styled.time`
