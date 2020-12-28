@@ -7,6 +7,15 @@ export const Container = styled.nav`
     margin-top: 2rem;
     width: 90%;
   }
+
+  svg {
+    transition: opacity 0.2s;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 `
 
 export const List = styled.ul`
@@ -21,11 +30,6 @@ export const Item = styled.li``
 export const Link = styled.a`
   color: ${props => props.theme.colors.primary};
   text-decoration: none;
-  transition: color 0.2s;
-
-  &:hover {
-    color: ${props => props.theme.colors.hover};
-  }
 `
 
 export const IconWrapper = styled.div`

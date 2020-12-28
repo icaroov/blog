@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 1020px;
 
-  padding: 2rem;
+  padding: 1rem;
   margin-left: auto;
   margin-right: auto;
 
