@@ -51,6 +51,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: ${props => props.theme.colors.background};
     line-height: 1;
+    height: 100vh;
     font-size: 100%;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
