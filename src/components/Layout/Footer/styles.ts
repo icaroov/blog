@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ArrowToTop as Arrow } from '@styled-icons/boxicons-regular/ArrowToTop'
+
 export const Container = styled.footer`
   -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
   -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
@@ -27,7 +30,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Tag = styled(Link)`
+export const BlogTag = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,5 +67,29 @@ export const Text = styled.div`
     &:hover {
       text-decoration: underline;
     }
+  }
+`
+export const ArrowTop = styled(Arrow)`
+  padding: 5px;
+  margin-right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 3px;
+  color: #fff;
+  background: ${props => props.theme.colors.border};
+
+  cursor: pointer;
+
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 800px) {
+    margin-right: 25px;
   }
 `

@@ -59,6 +59,9 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: auto;
   }
+  a {
+    font-weight: 400;
+  }
 `
 
 export default GlobalStyles

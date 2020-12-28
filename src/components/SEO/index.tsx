@@ -6,7 +6,7 @@ interface SEOProps {
   title: string
   description?: string
   image?: string
-  url: string
+  url?: string
 }
 
 const SEO: FC<SEOProps> = props => {
