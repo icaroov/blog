@@ -15,7 +15,7 @@ import * as Styled from '~app/components/Post/styles'
 
 const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
   const {
-    frontmatter: { title, description, date },
+    frontmatter: { title, description, date, image },
     html,
     timeToRead,
   } = data.markdownRemark
@@ -24,7 +24,7 @@ const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={description} image={image} />
       <CircleProgress />
       <Styled.Header variants={fadeInUp}>
         <Styled.Date variants={fadeInUp}>
@@ -59,6 +59,7 @@ export const query = graphql`
       frontmatter {
         title
         description
+        image
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
       }
       html

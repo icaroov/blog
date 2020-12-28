@@ -7,6 +7,7 @@ module.exports = {
     position: 'Desenvolvedor Web',
     description: 'A blog about frontend development and other cool stuff.',
     author: '@icaroov',
+    siteUrl: 'https://icarooliveira.dev',
     social: {
       instagram: 'https://www.instagram.com/icaroov/',
     },
@@ -23,7 +24,7 @@ module.exports = {
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         queries,
-        chunkSize: 10000,
+        chunkSize: 100,
         enablePartialUpdates: true,
       },
     },
@@ -39,6 +40,27 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-remark-prismjs`,
+      options: {
+        aliases: {
+          console: `bash`,
+          dosini: `ini`,
+          env: `bash`,
+          jsx: `jsx`,
+          es6: `js`,
+          flowchart: `none`,
+          gitignore: `none`,
+          gql: `graphql`,
+          htaccess: `apacheconf`,
+          mdx: `markdown`,
+          ml: `fsharp`,
+          sh: `bash`,
+          styl: `stylus`,
+          terminal: `bash`,
+        },
       },
     },
     {
@@ -73,21 +95,23 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Icaro Oliveira`,
+        short_name: `Icaro`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1e1f29`,
+        theme_color: `#1e1f29`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`,
       },
     },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: '#663399',
+        color: '#50FA7B',
         showSpinner: true,
       },
     },
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-offline',
   ],
 }

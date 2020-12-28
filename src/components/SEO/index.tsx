@@ -5,10 +5,12 @@ import { useStaticQuery, graphql } from 'gatsby'
 interface SEOProps {
   title: string
   description?: string
+  image?: string
+  url: string
 }
 
 const SEO: FC<SEOProps> = props => {
-  const { title, description } = props
+  const { title, description, image, url } = props
 
   const { site } = useStaticQuery(
     graphql`
@@ -17,6 +19,7 @@ const SEO: FC<SEOProps> = props => {
           siteMetadata {
             title
             description
+            siteUrl
             social {
               instagram
             }
@@ -29,6 +32,8 @@ const SEO: FC<SEOProps> = props => {
   const metaDescription = description || site.siteMetadata.description
 
   const titlePage = `${title} | ${site.siteMetadata.title}`
+  const siteUrl = url || site.siteMetadata.siteUrl
+  const ogImage = `${siteUrl}${image || '../../../static/assets/logo.png'}`
 
   return (
     <Helmet
@@ -48,11 +53,15 @@ const SEO: FC<SEOProps> = props => {
       <meta property="og:locale" content="pt-br" />
       <meta property="og:title" content={titlePage} />
       <meta property="og:site_name" content={site.siteMetadata.title} />
+      <meta property="og:image" content={ogImage} />
 
       <meta name="facebook:card" content="summary" />
       <meta name="facebook:site" content={site.siteMetadata.social.facebook} />
       <meta name="facebook:title" content={titlePage} />
       <meta name="facebook:description" content={metaDescription} />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image:src" content={ogImage} />
     </Helmet>
   )
 }
