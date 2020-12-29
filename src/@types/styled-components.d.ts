@@ -13,6 +13,7 @@ declare module 'styled-components' {
       success: string
       border: string
       footer: string
+      shadow: string
     }
     breakpoints?: {
       xs: string

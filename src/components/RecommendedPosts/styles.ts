@@ -28,9 +28,11 @@ export const RecommendedLink = styled(Link)`
   }
   &.previous {
     border-right: 1px solid ${props => props.theme.colors.border};
+    /* border-bottom: 1px solid ${props => props.theme.colors.border}; */
   }
   &.next {
     justify-content: flex-end;
+    /* border-bottom: 1px solid ${props => props.theme.colors.border}; */
   }
   &.previous:before {
     content: '\\2190';

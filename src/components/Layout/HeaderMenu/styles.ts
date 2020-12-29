@@ -13,7 +13,7 @@ export const Container = styled.header`
   padding: 2rem 3rem 2rem;
 
   > a {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
     text-decoration: none;
@@ -26,6 +26,13 @@ export const Container = styled.header`
   }
 
   @media (max-width: 800px) {
-    padding: 2rem 1rem 2rem;
+    > a {
+      font-size: 1rem;
+    }
+
+    padding: 1rem 2rem 1rem 1.4rem;
+    margin-bottom: 1rem;
+
+    box-shadow: 0px 4px 3px ${props => props.theme.colors.shadow};
   }
 `

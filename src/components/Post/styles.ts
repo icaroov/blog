@@ -5,7 +5,7 @@ export const Header = styled(motion.header)`
   color: white;
   margin: auto;
   max-width: 70rem;
-  padding: 0rem 5rem 0;
+  padding: 2rem 5rem 0;
 
   @media (max-width: 800px) {
     padding: 0;
@@ -40,10 +40,11 @@ export const Date = styled(motion.p)`
   color: ${props => props.theme.colors.primary};
   font-size: 1.1rem;
   font-weight: 100;
-  padding: 0 1.4rem;
+  padding: 0rem 1.4rem;
 
   @media (max-width: 800px) {
     font-size: 0.9rem;
+    padding: 1rem 1.4rem;
   }
 `
 

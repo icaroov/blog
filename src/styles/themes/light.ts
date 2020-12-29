@@ -11,5 +11,6 @@ export default {
     success: '#50FA7B',
     border: '#38444d',
     footer: '#FAFAFA',
+    shadow: 'rgba(50, 50, 50, 0.1)',
   },
 }

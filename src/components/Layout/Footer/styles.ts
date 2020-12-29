@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 import { ArrowToTop as Arrow } from '@styled-icons/boxicons-regular/ArrowToTop'
 
 export const Container = styled.footer`
-  -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
-  -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
-  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.1);
+  -webkit-box-shadow: 0px -4px 3px ${props => props.theme.colors.shadow};
+  -moz-box-shadow: 0px -4px 3px ${props => props.theme.colors.shadow};
+  box-shadow: 0px -4px 3px ${props => props.theme.colors.shadow};
 
   margin-top: 5px;
   background: ${props => props.theme.colors.footer};
