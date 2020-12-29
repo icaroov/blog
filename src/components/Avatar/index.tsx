@@ -8,9 +8,9 @@ const Avatar: React.FC = () => {
   const { avatarImage }: AvatarProps = useStaticQuery(
     graphql`
       query {
-        avatarImage: file(relativePath: { eq: "profile-photo.jpg" }) {
+        avatarImage: file(relativePath: { eq: "perfil2.jpg" }) {
           childImageSharp {
-            fixed(width: 60, height: 60) {
+            fixed(width: 200, height: 200) {
               ...GatsbyImageSharpFixed
             }
           }
@@ -24,9 +24,10 @@ const Avatar: React.FC = () => {
       fixed={avatarImage.childImageSharp.fixed}
       style={{
         borderRadius: '50%',
-        height: '3.75rem',
-        width: ' 5.75rem',
-        marginRight: '1rem',
+        height: '5.375rem',
+        width: ' 5.375rem',
+        marginRight: '0.75rem',
+        flexShrink: 0,
       }}
     />
   )
