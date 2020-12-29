@@ -25,8 +25,8 @@ const Avatar: React.FC = () => {
       style={{
         borderRadius: '50%',
         height: '3.75rem',
-        width: '3.75rem',
-        margin: 'auto',
+        width: ' 5.75rem',
+        marginRight: '1rem',
       }}
     />
   )
