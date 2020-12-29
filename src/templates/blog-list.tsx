@@ -5,6 +5,7 @@ import { PostQueryProps } from '~app/@types/post'
 import Layout from '~app/components/Layout'
 import SEO from '~app/components/SEO'
 
+import Profile from '~app/components/Profile'
 import PostItem from '~app/components/PostItem'
 import Pagination from '~app/components/Pagination'
 
@@ -40,6 +41,8 @@ const BlogList: React.FC<PostQueryProps> = props => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Profile />
+
       {postList}
 
       <Pagination
