@@ -101,7 +101,7 @@ module.exports = {
         background_color: `#1e1f29`,
         theme_color: `#1e1f29`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/red-icon.png`,
       },
     },
     {
