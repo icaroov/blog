@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   align-items: center;
 
   width: 100%;
-  max-width: 1020px;
+  max-width: 800px;
 
   padding: 1rem;
   margin-left: auto;

@@ -6,7 +6,7 @@ export const Container = styled.header`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 1020px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 

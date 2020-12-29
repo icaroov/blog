@@ -8,7 +8,7 @@ export const Container = styled.section`
 
 export const Main = styled(motion.main)`
   width: 100%;
-  max-width: 1020px;
+  max-width: 800px;
   min-height: 100vh;
 
   margin-left: auto;
