@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDisqusComments from 'react-disqus-comments'
+import { DiscussionEmbed } from 'disqus-react'
 
 import * as Styled from './styles'
 
@@ -9,16 +9,19 @@ interface Props {
 }
 
 const Comments: React.FC<Props> = ({ url, title }) => {
-  const completeURL = `https://icaro-devblog.com.br${url}`
+  const completeURL = `https://icaroov.netlify.app/${url}`
 
   return (
     <Styled.Container>
       <Styled.CommentsTitle>Comentários</Styled.CommentsTitle>
-      <ReactDisqusComments
+      <DiscussionEmbed
         shortname="icaroov"
-        identifier={completeURL}
-        title={title}
-        url={completeURL}
+        config={{
+          url: completeURL,
+          identifier: completeURL,
+          title,
+          language: 'pt_BR',
+        }}
       />
     </Styled.Container>
   )

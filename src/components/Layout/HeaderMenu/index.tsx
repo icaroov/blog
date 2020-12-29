@@ -13,7 +13,7 @@ const HeaderMenu: React.FC = () => {
 
   return (
     <Styled.Container>
-      <Link to="/">Blog.</Link>
+      <Link to="/">Home</Link>
 
       <DarkModeSwitch
         checked={title === 'dark'}
