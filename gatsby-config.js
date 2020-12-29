@@ -7,7 +7,7 @@ module.exports = {
     position: 'Desenvolvedor Web',
     description: 'A blog about frontend development and other cool stuff.',
     author: '@icaroov',
-    siteUrl: 'https://icarooliveira.dev',
+    siteUrl: 'https://icarooliveira.dev.br',
     social: {
       instagram: 'https://www.instagram.com/icaroov/',
     },
@@ -113,5 +113,6 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
+    'gatsby-plugin-netlify-cms',
   ],
 }

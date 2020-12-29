@@ -30,6 +30,7 @@ export const Container = styled.section`
   .ais-SearchBox-input {
     background: none;
     border: none;
+    outline: none;
     border-bottom: 1px solid #38444d;
     color: #8899a6;
     display: flex;
