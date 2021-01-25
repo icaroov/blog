@@ -6,8 +6,7 @@ thumbnail: assets/img/undraw_online_page_re_lhgx.png
 category: dev
 background: "#637a91"
 ---
-A maioria das pessoas se acostumou a usar os termos “internet” e “web” alternadamente. Embora a rede e a web sejam casadas, elas são fundamentalmente diferentes. Em termos simples, a Internet é a conexão entre inúmeros servidores, computadores e dispositivos separados, conforme explico em detalhes aqui. Enquanto a World Wide Web ou Web é apenas um espaço digital comum para troca de informações, facilitado por redes globais de computadores ou a Internet, você se conecta à Internet para acessar a web. A Web é o meio onde editamos, descobrimos e compartilhamos informações - por meio de links - de acordo com uma linguagem padrão: HTML. Agora entendemos que a Internet conecta os participantes enquanto a web conecta as informações.
-
+A maioria das pessoas se acostumou a tratar os termos “internet” e “web” como sinônimos. Embora ambos estejam fortemente relacionados, eles são fundamentalmente diferentes. Em termos simples, a Internet é a conexão entre inúmeros servidores, computadores e dispositivos separados. Enquanto a World Wide Web ou Web é apenas um espaço digital comum para troca de informações, facilitado por redes globais de computadores ou a Internet, ou seja, você se conecta à Internet para acessar a web. A Web é o meio onde editamos, descobrimos e compartilhamos informações - por meio de links - de acordo com uma linguagem padrão: HTML. Agora entendemos que a Internet conecta as pessoas enquanto a web conecta as informações.
 
 
 ## História da Web
