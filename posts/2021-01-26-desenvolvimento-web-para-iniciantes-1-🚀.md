@@ -55,3 +55,6 @@ Muitos iniciantes vão querer sempre "o melhor editor de todos os tempos", poré
 Bom, comecei pelo simples e básico, tentei deixar tudo de uma forma de fácil de compreensão. Ao longo dos próximos dias pretendo incrementar mais esse tema e publicar novos posts. Ainda nessa pegada de primeiros passos, pretendo ainda falar sobre HTML, CSS, JavaScript, Package Managers, Versionamento de código, e entre outras coisas. Porém, claro, pretendo também postar sobre algumas que venho trabalhando e estudando no momento, como Next.js, TypeScript, GraphQL, Apollo, etc.
 
 Até mais! 👋
+
+#### Referências
+- [Coder Coder](https://www.youtube.com/watch?v=ysEN5RaKOlA&t=183s)
