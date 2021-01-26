@@ -3,7 +3,7 @@ const queries = require('./src/graphql/algolia-query.ts')
 
 module.exports = {
   siteMetadata: {
-    title: 'Icaro Oliveira',
+    title: 'Ícaro Oliveira',
     position: 'Desenvolvedor Web',
     description: 'A blog about frontend development and other cool stuff.',
     author: '@icaroov',
@@ -68,6 +68,13 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets/img`,
+        name: `images`,
       },
     },
     {

@@ -26,7 +26,7 @@ export interface EdgesProps {
 type Frontmatter = {
   title: string
   description: string
-  image: string
+  thumbnail: string
   date: string
   category?: string
   background?: string
