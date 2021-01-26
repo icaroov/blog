@@ -9,15 +9,15 @@ import Layout from '~app/components/Layout'
 import SEO from '~app/components/SEO'
 
 import RecommendedPosts from '~app/components/RecommendedPosts'
-// import Comments from '~app/components/Comments'
+import Comments from '~app/components/Comments'
 
 import * as Styled from '~app/components/Post/styles'
 
 const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
   const {
-    frontmatter: { title, description, date, image },
+    frontmatter: { title, description, date, thumbnail },
     html,
-    // fields: { slug },
+    fields: { slug },
     timeToRead,
   } = data.markdownRemark
 
@@ -25,7 +25,7 @@ const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} image={image} />
+      <SEO title={title} description={description} image={thumbnail} />
 
       <Styled.Header variants={fadeInUp}>
         <Styled.Date variants={fadeInUp}>
@@ -46,7 +46,7 @@ const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
       </Styled.MainContent>
 
       <RecommendedPosts next={nextPost} previous={previousPost} />
-      {/* <Comments title={title} url={slug} /> */}
+      <Comments title={title} url={slug} />
     </Layout>
   )
 }
@@ -60,7 +60,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-        image
+        thumbnail
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
       }
       html

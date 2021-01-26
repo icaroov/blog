@@ -12,10 +12,18 @@ export const Container = styled.section`
       color: #1fa1f2 !important;
     }
   }
+
+  > strong {
+    color: ${props => props.theme.colors.primary};
+  }
+
+  @media (max-width: 800px) {
+    padding: 1rem;
+  }
 `
 
 export const CommentsTitle = styled.h2`
-  color: #fff;
+  color: ${props => props.theme.colors.primary};
   font-size: 2.1rem;
   font-weight: 700;
   padding-bottom: 2rem;

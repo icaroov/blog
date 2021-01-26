@@ -47,11 +47,11 @@ export const Author = styled.h1`
 `
 
 export const Description = styled.span`
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.2rem;
 
   @media (max-width: 400px) {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 `

@@ -33,8 +33,8 @@ const Profile: React.FC = () => {
       </motion.div>
 
       <Styled.Description>
-        Written by {title} who works building clean user interfaces with React
-        and others cool stuff. 👋
+        Escrito por {title}, entusiasta das melhores tecnologias web e admirador
+        de interfaces minimalistas. 👋
       </Styled.Description>
     </Styled.Container>
   )
