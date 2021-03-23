@@ -1,9 +1,3 @@
-export interface AlgoliaProps {
-  appId: string
-  searchOnlyApiKey: string
-  indexName: string
-}
-
 export interface HitProps {
   hit: {
     fields: {
@@ -15,5 +9,13 @@ export interface HitProps {
     category: string
     background: string
     timeToRead: string
+  }
+}
+
+export interface SearchProps {
+  algolia: {
+    appId: string
+    searchOnlyApiKey: string
+    indexName: string
   }
 }

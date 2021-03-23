@@ -1,6 +1,20 @@
 const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
+exports.sourceNodes = ({ actions, schema }) => {
+  const { createTypes } = actions
+
+  createTypes(`
+  type MarkdownRemarkFrontmatter {
+    image: String
+  }
+
+  type MarkdownRemark implements Node {
+    frontmatter: MarkdownRemarkFrontmatter
+  }
+  `)
+}
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {

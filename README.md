@@ -63,4 +63,4 @@ $ yarn start
 
 ---
 
-Made with 💜 by Ícaro Oliveira
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/92c79b80-85ee-4fd2-8549-87f54ca653d2/deploy-status)](https://app.netlify.com/sites/icaroov/deploys)

@@ -4,15 +4,7 @@ import { InstantSearch, SearchBox, Hits, Stats } from 'react-instantsearch-dom'
 
 import PostItem from '../PostItem'
 import * as Styled from './styles'
-import { AlgoliaProps, HitProps } from './props'
-
-const algolia: AlgoliaProps = {
-  appId: process.env.GATSBY_ALGOLIA_APP_ID,
-  searchOnlyApiKey: process.env.GATSBY_ALGOLIA_SEARCH_KEY,
-  indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-}
-
-const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey)
+import { SearchProps, HitProps } from './props'
 
 function Hit({
   hit: { title, description, date, category, timeToRead, background, fields },
@@ -30,7 +22,9 @@ function Hit({
   )
 }
 
-const Search: React.FC = () => {
+const Search: React.FC<SearchProps> = ({ algolia }) => {
+  const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey)
+
   return (
     <Styled.Container>
       <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
