@@ -1,6 +1,6 @@
 ---
-title: "Desenvolvimento Web para Iniciantes #1 🚀"
-description: Uma pequena introdução ao mundo do desenvolvimento web.
+title: "Desenvolvimento Web para Iniciantes #1 "
+description: Uma pequena introdução ao mundo do desenvolvimento web. 🚀
 date: 2021-01-26 09:25:36
 thumbnail: assets/img/web.png
 category: dev
@@ -10,9 +10,11 @@ Quando eu comecei a aprender a como desenvolver para a web, eu gostaria de ter e
 
 Agora, depois de alguns meses no mercado de trabalho e cerca de 1 ano e meio de estudos, gostaria de repassar pelo menos o mínimo que consegui absorver durante esse tempo de aprendizado.
 
-Então, se você quer se tornar um desenvolvedor ou desenvolvedora web, por onde acha que deve começar? Bom, é certamente complicado achar uma boa fonte sem sofrer uma sobrecarga de informações e uma sopa de várias letrinhas e siglas.
+Então, se você quer se tornar um desenvolvedor ou desenvolvedora web, por onde acha que deve começar? 
 
 ![web](https://res.cloudinary.com/ddi5agea1/image/upload/v1611672227/Blog%20Assets/web1_cygzgd.gif)
+
+Bom, é certamente complicado achar uma boa fonte sem sofrer uma sobrecarga de informações e uma sopa de várias letrinhas e siglas.
 
 Nesse primeiro post, organizei um compilado de ferramentas e tecnologias que eu considero essenciais que um desenvolvedor ou desenvolvedora web saiba antes de mais nada. Espero que ajude! ✨
 
@@ -44,17 +46,17 @@ Quando construímos um website a ferramenta mais essencial que você poderá usa
 
 Existem várias opções boas por aí, mas atualmente o editor mais popular é o da Microsoft, o [VS Code](https://code.visualstudio.com/). O VS Code se tornou popular basicamente por ser leve, rápido, grátis, fácil de usar e altamente personalizável com temas ou extensões de outros editores de código.
 
-Outros editores que também são bastante utilizados são:
+Outros editores bastante utilizados são:
 - [Sublime Text](https://www.sublimetext.com/)
 - [Atom](https://atom.io/)
-- [VIM](https://www.vim.org/)
+- [Vim](https://www.vim.org/)
 
 Muitos iniciantes vão querer sempre "o melhor editor de todos os tempos", porém isso é mais uma questão de gosto do que existir de fato um melhor. Recomendo dar uma olhada em alguns e ver qual melhor você se adapta.
 
 ## Finalizando
-Bom, comecei pelo simples e básico, tentei deixar tudo de uma forma de fácil de compreensão. Ao longo dos próximos dias pretendo incrementar mais esse tema e publicar novos posts. Ainda nessa pegada de primeiros passos, pretendo ainda falar sobre HTML, CSS, JavaScript, Package Managers, Versionamento de código, e entre outras coisas. Porém, claro, pretendo também postar sobre algumas que venho trabalhando e estudando no momento, como Next.js, TypeScript, GraphQL, Apollo, etc.
+Bom, comecei pelo simples e básico, tentei deixar tudo de uma forma de fácil de compreensão. Ao longo dos próximos dias pretendo incrementar mais esse tema e publicar novos posts. Ainda nessa pegada de primeiros passos, pretendo falar sobre HTML, CSS, JavaScript, Package Managers, Versionamento de código, e entre outras coisas. Porém, claro, pretendo também postar sobre algumas tecnologias que venho trabalhando em meus projetos e estudando no momento, como Next.js, TypeScript, GraphQL, bibliotecas como RxJS, React, etc.
 
-Até mais! 👋
+Por hoje é só, até mais! 👋
 
 #### Referências
 - [Coder Coder](https://www.youtube.com/watch?v=ysEN5RaKOlA&t=183s)

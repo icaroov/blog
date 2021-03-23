@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.joaopedro.cc/img/github/typescript-gatsby-starter.png" alt="Gatsby and TypeScript">
+  <img src="https://res.cloudinary.com/ddi5agea1/image/upload/v1612802903/gatsby-typescript_babtou.png" width="600px" alt="Gatsby and TypeScript">
 </p>
 
 <p align="center">
@@ -37,13 +37,17 @@
 
 ## 🚀 How to run
 
-To run smoothly, install Gatsby CLI globally on your machine.
+### Setup a Gatsby App (optional)
+
+To set up the Gatsby app, you’ll first need to install the Gatsby CLI.
+
+The Gatsby CLI tool lets you quickly create new Gatsby-powered sites and run commands for developing Gatsby sites. It can be installed globally by running the command below.
 
 ```shell
-npm install -g gatsby-cli
+yarn global add gatsby-cli
 ```
 
-Next:
+### Installing dependencies:
 
 ```bash
 # Clone this repository
