@@ -1,8 +1,9 @@
-<p align="center">
+<div align="center">
+<p>
   <img src="https://res.cloudinary.com/ddi5agea1/image/upload/v1612802903/gatsby-typescript_babtou.png" width="600px" alt="Gatsby and TypeScript">
 </p>
 
-<p align="center">
+<p>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/icaroov/gatsby-blog?color=%238A4BAF&style=flat-square">
 
   <a href="https://github.com/icaroov/my-blog/commits/master">
@@ -10,6 +11,8 @@
   </a>
 </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/92c79b80-85ee-4fd2-8549-87f54ca653d2/deploy-status)](https://app.netlify.com/sites/icaroov/deploys)
+</div>
 <br>
 
 <p align="center">
@@ -64,7 +67,3 @@ $ yarn start
 
 # The server will start on the port:8000 - access http://localhost:8000
 ```
-
----
-
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/92c79b80-85ee-4fd2-8549-87f54ca653d2/deploy-status)](https://app.netlify.com/sites/icaroov/deploys)
