@@ -21,7 +21,7 @@ export const Title = styled(motion.h1)`
   margin: 1rem auto;
 
   @media (max-width: 800px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 `
 
