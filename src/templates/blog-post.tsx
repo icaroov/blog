@@ -9,7 +9,6 @@ import Layout from '~app/components/Layout'
 import SEO from '~app/components/SEO'
 
 import RecommendedPosts from '~app/components/RecommendedPosts'
-import Comments from '~app/components/Comments'
 
 import * as Styled from '~app/components/Post/styles'
 
@@ -45,8 +44,9 @@ const BlogPost: React.FC<PostProps> = ({ data, pageContext }) => {
         ></motion.div>
       </Styled.MainContent>
 
-      <RecommendedPosts next={nextPost} previous={previousPost} />
-      <Comments title={title} url={slug} />
+      {!!nextPost && (
+        <RecommendedPosts next={nextPost} previous={previousPost} />
+      )}
     </Layout>
   )
 }
