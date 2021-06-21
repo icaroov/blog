@@ -28,7 +28,7 @@
     "framer-motion": "^4.0.2",
     "gatsby": "3.1.2",
     "gatsby-image": "^3.1.0",
-    "gatsby-plugin-algolia-search": "^0.5.7",
+    "gatsby-plugin-algolia-search": "^0.5.0",
     "gatsby-plugin-image": "^1.1.2",
     "gatsby-plugin-manifest": "^3.1.0",
     "gatsby-plugin-netlify-cms": "^5.1.0",

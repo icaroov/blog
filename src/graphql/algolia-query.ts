@@ -25,12 +25,11 @@ const POST_QUERY = /* GraphQL */ `
   }
 `
 
-const transformerData = arr =>
+const flatten = arr =>
   arr.map(({ node: { frontmatter, ...rest } }) => ({
     ...frontmatter,
     date_timestamp: parseInt(
       (new Date(frontmatter.date_timestamp).getTime() / 1000).toFixed(0),
-      10,
     ),
     ...rest,
   }))
@@ -40,7 +39,7 @@ const settings = { attributesToSnippet: [`excerpt:20`] }
 const queries = [
   {
     query: POST_QUERY,
-    transformer: ({ data }) => transformerData(data.posts.edges),
+    transformer: ({ data }) => flatten(data.posts.edges),
     indexName: `Posts`,
     settings,
   },
