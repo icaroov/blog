@@ -6,7 +6,7 @@ thumbnail: https://res.cloudinary.com/ddi5agea1/image/upload/v1624418340/Blog%20
 category: dica
 background: "#50FA7B"
 ---
-Nesse pequeno tutorial vou te mostrar como criar um setup completo com ESLint e Prettier integrados para sua aplicação React + TypeScript.
+Nesse pequeno tutorial vou te mostrar como criar um setup completo do ESLint para sua aplicação React + TypeScript.
 
 ## Mas, o que é ESLint?
 
