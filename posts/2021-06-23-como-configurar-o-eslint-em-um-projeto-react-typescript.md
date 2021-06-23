@@ -84,15 +84,13 @@ Após instalar, precisamos configurá-lo dentro do nosso arquivo `.eslintrc.json
 }
 ```
 
-Outras três regras que gosto de desligar caso você esteja utilizando um projeto com TypeScript: [react/prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md), [explicit-module-boundary-types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md) e [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md).
+Outras três regras que gosto de desligar caso você esteja utilizando um projeto com React na versão 17+ e TypeScript:
 
-A primeira define tipos para seu componente para melhorar a capacidade de reutilização desses dados, porém, o TypeScript já faz isso, portanto não precisamos.
+1. [react/prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md): define tipos para seu componente para melhorar a capacidade de reutilização desses dados, porém, o TypeScript já faz isso, portanto não precisamos.
+2. [explicit-module-boundary-types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md): segundo essa regra precisamos explicitar o tipo do retorno em todas as funções exportadas, mesmo que o tipo dessas funções estejam implícito. Porém, o TypeScript mais moderno já consegue inferir tipos, portanto, também não precisamos dessa regra habilitada.
+3. [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md): define que enquanto utilizamos JSX em algum arquivo, precisamos importar o React, porém, nas versões mais modernas a variável React já vem definida de forma global na aplicação, portanto, não precisamos ficar importante ela em todos os arquivos que utilizam JSX.
 
-A segunda regra diz que precisamos explicitar o tipo do retorno em todas as funções exportadas, mesmo que o tipo dessas funções estejam implícito. Porém, o TypeScript mais moderno já consegue inferir tipos, portanto, também não precisamos dessa regra habilitada.
-
-A terceira define que enquanto utilizamos JSX em algum arquivo, precisamos importar o React, porém, nas versões mais modernas a variável React já vem definida de forma global na aplicação, portanto, não precisamos ficar importante ela em todos os arquivos que utilizam JSX.
-
-Nota: isso só funciona se a variável React estiver sendo setando em um escopo global.
+Nota: a regra 3 só funciona se a variável `React` estiver sendo declarada em um escopo global dentro da sua aplicação.
 
 Logo, basta adicionar:
 
@@ -101,8 +99,8 @@ Logo, basta adicionar:
   "rules": {
 // ...
    "react/prop-types": "off",
-	"@typescript-eslint/explicit-module-boundary-types": "off",
-	"react/react-in-jsx-scope": "off",
+   "@typescript-eslint/explicit-module-boundary-types": "off",
+   "react/react-in-jsx-scope": "off",
   }
 }
 ```
