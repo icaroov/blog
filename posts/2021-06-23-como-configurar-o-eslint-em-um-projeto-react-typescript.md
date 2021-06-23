@@ -1,6 +1,6 @@
 ---
 title: Como configurar o ESLint em projetos React + TypeScript
-description: O que é ESLint? Como instalar? Porque fazer linting em seu código é importante?
+description: Porque fazer linting em seu código é importante?
 date: 2021-06-23 12:03:56
 thumbnail: https://res.cloudinary.com/ddi5agea1/image/upload/v1624418340/Blog%20Assets/eslint0_uber7j.jpg
 category: dica
