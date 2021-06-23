@@ -1,6 +1,6 @@
 ---
-title: Como configurar o ESLint em um projeto React + TypeScript
-description: O que é ESLint? Como instalar? Porque fazer linting em seu código é importante?
+title: Como configurar o ESLint em projetos React + TypeScript
+description: Porque fazer linting em seu código é importante?
 date: 2021-06-23 12:03:56
 thumbnail: https://res.cloudinary.com/ddi5agea1/image/upload/v1624418340/Blog%20Assets/eslint0_uber7j.jpg
 category: dica
@@ -10,7 +10,7 @@ Nesse pequeno tutorial vou te mostrar como criar um setup completo do ESLint par
 
 ## Mas, o que é ESLint?
 
-Basicamente, o ESLint é um projeto open source que ajuda desenvolvedores a encontrar e consertar problemas em seu código JavaScript. Em outras palavras, ele analisa seu código e executa regras de linting. Essas regras podem disparar avisos ou erros para que você saiba se o seu código está de fato com algum erro ou não.
+Basicamente, o [ESLint](https://eslint.org/) é um projeto open source que ajuda desenvolvedores a encontrar e consertar problemas em seu código JavaScript. Em outras palavras, ele analisa seu código e executa regras de linting. Essas regras podem disparar avisos ou erros para que você saiba se o seu código está de fato com algum erro ou não.
 
 ## Mas porque devo me preocupar com linting em meu código?
 
@@ -33,22 +33,22 @@ Ou utilizando o binário do próprio repositório do ESLint e inicializar nossas
 Para esse tutorial, utilizaremos esse comando:
 
 ```bash
-npm install eslint -g
+npx eslint --init
 ```
 
 Após executar esse comando, vamos responder algumas perguntas.
 
 Para esse tutorial, irei configurar o projeto da seguinte maneira:
 
-- How would you like to use ESLint? · To check syntax and find problems 
-- What type of modules does your project use? · JavaScript modules (import/export) 
-- Which framework does your project use? · React 
-- Does your project use TypeScript? · Yes 
-- Where does your code run? · Browser 
-- What format do you want your config file to be in? · JSON 
-- Would you like to install them now with npm? · No
+* **How would you like to use ESLint?** · To check syntax and find problems 
+* **What type of modules does your project use?** · JavaScript modules (import/export) 
+* **Which framework does your project use?** · React 
+* **Does your project use TypeScript?** · Yes 
+* **Where does your code run?** · Browser 
+* **What format do you want your config file to be in?** · JSON 
+* **Would you like to install them now with npm?** · No
 
-Um adendo aqui: como utilizo o yarn como package manager na minha máquina, na última opção que é para instalar todas as dependências necessárias para o ESLint funcionar corretamente, irei optar pelo "No". Nesse caso específico, irei copiar todo o comando e instalar manualmente as dependências através do `yarn add`.
+Nota: como utilizo o yarn como package manager na minha máquina, na última opção que é para instalar todas as dependências necessárias para o ESLint funcionar corretamente, irei optar pelo "No". Nesse caso específico, irei copiar todo o comando e instalar manualmente as dependências através do `yarn add`.
 
 ```bash
 yarn add -D eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest eslint@latest
@@ -84,15 +84,13 @@ Após instalar, precisamos configurá-lo dentro do nosso arquivo `.eslintrc.json
 }
 ```
 
-Outras três regras que gosto de desligar caso você esteja utilizando um projeto com TypeScript: [react/prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md), [explicit-module-boundary-types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md) e [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md).
+Outras três regras que gosto de desligar caso você esteja utilizando um projeto com React na versão 17+ e TypeScript:
 
-A primeira define tipos para seu componente para melhorar a capacidade de reutilização desses dados, porém, o TypeScript já faz isso, portanto não precisamos.
+1. [react/prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md): define tipos para seu componente para melhorar a capacidade de reutilização desses dados, porém, o TypeScript já faz isso, portanto não precisamos.
+2. [explicit-module-boundary-types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md): segundo essa regra precisamos explicitar o tipo do retorno em todas as funções exportadas, mesmo que o tipo dessas funções estejam implícito. Porém, o TypeScript mais moderno já consegue inferir tipos, portanto, também não precisamos dessa regra habilitada.
+3. [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md): define que enquanto utilizamos JSX em algum arquivo, precisamos importar o React, porém, nas versões mais modernas a variável React já vem definida de forma global na aplicação, portanto, não precisamos ficar importante ela em todos os arquivos que utilizam JSX.
 
-A segunda regra diz que precisamos explicitar o tipo do retorno em todas as funções exportadas, mesmo que o tipo dessas funções estejam implícito. Porém, o TypeScript mais moderno já consegue inferir tipos, portanto, também não precisamos dessa regra habilitada.
-
-A terceira define que enquanto utilizamos JSX em algum arquivo, precisamos importar o React, porém, nas versões mais modernas a variável React já vem definida de forma global na aplicação, portanto, não precisamos ficar importante ela em todos os arquivos que utilizam JSX.
-
-Nota: isso só funciona se a variável React estiver sendo setando em um escopo global.
+Nota: a regra 3 só funciona se a variável `React` estiver sendo declarada em um escopo global dentro da sua aplicação.
 
 Logo, basta adicionar:
 
@@ -101,8 +99,8 @@ Logo, basta adicionar:
   "rules": {
 // ...
    "react/prop-types": "off",
-	 "@typescript-eslint/explicit-module-boundary-types": "off",
-	 "react/react-in-jsx-scope": "off",
+   "@typescript-eslint/explicit-module-boundary-types": "off",
+   "react/react-in-jsx-scope": "off",
   }
 }
 ```
@@ -158,7 +156,7 @@ Pronto, todas regras foram configuradas e idealmente o seu arquivo `.eslintrc.js
 
 ## Plugin ESLint para VSCode
 
-Caso você utilize o VSCode, recomendo a instalação do [Plugin EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) que permite que o IntelliSense do VSCode demonstre os alertas de erros, incluindo as regras que definimos no arquivo de configuração.
+Caso você utilize o VSCode, recomendo a instalação do [Plugin EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) que permite que o Intellisense do VSCode demonstre os alertas de erros, incluindo as regras que definimos no arquivo de configuração.
 
 ![eslint-extension](https://res.cloudinary.com/ddi5agea1/image/upload/v1624418069/Blog%20Assets/eslint_v9g8pm.png)
 
@@ -186,3 +184,5 @@ Executando esse comando, podemos ver que ele nos avisou do seguinte erro:
 ![eslint-script](https://res.cloudinary.com/ddi5agea1/image/upload/v1624418071/Blog%20Assets/eslint3_u9qttf.png)
 
 Recomendo você ter esse script para ajudar com métodos de CI/CD futuramente em seu projeto.
+
+Logo mais estarei publicando um outro post sobre como integrar o ESLint com o [Prettier](https://prettier.io/) e ter um setup completo de linting em sua aplicação. 👋
