@@ -33,22 +33,22 @@ Ou utilizando o binário do próprio repositório do ESLint e inicializar nossas
 Para esse tutorial, utilizaremos esse comando:
 
 ```bash
-npm install eslint -g
+npx eslint --init
 ```
 
 Após executar esse comando, vamos responder algumas perguntas.
 
 Para esse tutorial, irei configurar o projeto da seguinte maneira:
 
-- How would you like to use ESLint? · To check syntax and find problems 
-- What type of modules does your project use? · JavaScript modules (import/export) 
-- Which framework does your project use? · React 
-- Does your project use TypeScript? · Yes 
-- Where does your code run? · Browser 
-- What format do you want your config file to be in? · JSON 
-- Would you like to install them now with npm? · No
+* **How would you like to use ESLint?** · To check syntax and find problems 
+* **What type of modules does your project use?** · JavaScript modules (import/export) 
+* **Which framework does your project use?** · React 
+* **Does your project use TypeScript?** · Yes 
+* **Where does your code run?** · Browser 
+* **What format do you want your config file to be in?** · JSON 
+* **Would you like to install them now with npm?** · No
 
-Um adendo aqui: como utilizo o yarn como package manager na minha máquina, na última opção que é para instalar todas as dependências necessárias para o ESLint funcionar corretamente, irei optar pelo "No". Nesse caso específico, irei copiar todo o comando e instalar manualmente as dependências através do `yarn add`.
+Nota: como utilizo o yarn como package manager na minha máquina, na última opção que é para instalar todas as dependências necessárias para o ESLint funcionar corretamente, irei optar pelo "No". Nesse caso específico, irei copiar todo o comando e instalar manualmente as dependências através do `yarn add`.
 
 ```bash
 yarn add -D eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest eslint@latest
@@ -101,8 +101,8 @@ Logo, basta adicionar:
   "rules": {
 // ...
    "react/prop-types": "off",
-	 "@typescript-eslint/explicit-module-boundary-types": "off",
-	 "react/react-in-jsx-scope": "off",
+	"@typescript-eslint/explicit-module-boundary-types": "off",
+	"react/react-in-jsx-scope": "off",
   }
 }
 ```
@@ -158,7 +158,7 @@ Pronto, todas regras foram configuradas e idealmente o seu arquivo `.eslintrc.js
 
 ## Plugin ESLint para VSCode
 
-Caso você utilize o VSCode, recomendo a instalação do [Plugin EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) que permite que o IntelliSense do VSCode demonstre os alertas de erros, incluindo as regras que definimos no arquivo de configuração.
+Caso você utilize o VSCode, recomendo a instalação do [Plugin EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) que permite que o Intellisense do VSCode demonstre os alertas de erros, incluindo as regras que definimos no arquivo de configuração.
 
 ![eslint-extension](https://res.cloudinary.com/ddi5agea1/image/upload/v1624418069/Blog%20Assets/eslint_v9g8pm.png)
 
@@ -186,3 +186,5 @@ Executando esse comando, podemos ver que ele nos avisou do seguinte erro:
 ![eslint-script](https://res.cloudinary.com/ddi5agea1/image/upload/v1624418071/Blog%20Assets/eslint3_u9qttf.png)
 
 Recomendo você ter esse script para ajudar com métodos de CI/CD futuramente em seu projeto.
+
+Por esse post é só, logo mais estarei publicando um outro sobre como integrar o ESLint com o Prettier e ter um setup completo de linting em sua aplicação. 👋
