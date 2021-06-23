@@ -10,7 +10,7 @@ Nesse pequeno tutorial vou te mostrar como criar um setup completo do ESLint par
 
 ## Mas, o que é ESLint?
 
-Basicamente, o ESLint é um projeto open source que ajuda desenvolvedores a encontrar e consertar problemas em seu código JavaScript. Em outras palavras, ele analisa seu código e executa regras de linting. Essas regras podem disparar avisos ou erros para que você saiba se o seu código está de fato com algum erro ou não.
+Basicamente, o [ESLint](https://eslint.org/) é um projeto open source que ajuda desenvolvedores a encontrar e consertar problemas em seu código JavaScript. Em outras palavras, ele analisa seu código e executa regras de linting. Essas regras podem disparar avisos ou erros para que você saiba se o seu código está de fato com algum erro ou não.
 
 ## Mas porque devo me preocupar com linting em meu código?
 
@@ -185,4 +185,4 @@ Executando esse comando, podemos ver que ele nos avisou do seguinte erro:
 
 Recomendo você ter esse script para ajudar com métodos de CI/CD futuramente em seu projeto.
 
-Por esse post é só, logo mais estarei publicando um outro sobre como integrar o ESLint com o Prettier e ter um setup completo de linting em sua aplicação. 👋
+Logo mais estarei publicando um outro post sobre como integrar o ESLint com o [Prettier](https://prettier.io/) e ter um setup completo de linting em sua aplicação. 👋
